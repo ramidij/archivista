@@ -20,6 +20,7 @@ import (
 
 var (
 	archivistaUrl string
+	oidcToken     string
 
 	rootCmd = &cobra.Command{
 		Use:   "archivistactl",
@@ -29,6 +30,7 @@ var (
 
 func init() {
 	rootCmd.PersistentFlags().StringVarP(&archivistaUrl, "archivistaurl", "u", "http://localhost:8082", "url of the archivista instance")
+	rootCmd.PersistentFlags().StringVarP(&oidcToken, "oidctoken", "t", "", "OIDC token to authenticate with the archivista instance")
 }
 
 func Execute() error {

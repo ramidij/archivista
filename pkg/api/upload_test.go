@@ -64,7 +64,7 @@ func (ut *UTAPIStoreSuite) Test_Store() {
 	}
 
 	// test api.Store happy flow
-	resp, err := api.Store(ctx, testServer.URL, *attEnvelop)
+	resp, err := api.Store(ctx, testServer.URL, "", *attEnvelop)
 	if err != nil {
 		ut.FailNow(err.Error())
 	}
@@ -97,7 +97,7 @@ func (ut *UTAPIStoreSuite) Test_StoreWithReader() {
 	// context
 	ctx := context.TODO()
 
-	resp, err := api.StoreWithReader(ctx, testServer.URL, attIo)
+	resp, err := api.StoreWithReader(ctx, testServer.URL, "", attIo)
 	if err != nil {
 		ut.FailNow(err.Error())
 	}
@@ -115,7 +115,7 @@ func (ut *UTAPIStoreSuite) Test_StoreWithReader_NoServer() {
 	// context
 	ctx := context.TODO()
 
-	resp, err := api.StoreWithReader(ctx, "http://invalid-archivista", attIo)
+	resp, err := api.StoreWithReader(ctx, "http://invalid-archivista", "", attIo)
 	ut.Error(err)
 	ut.Equal(resp, api.StoreResponse{})
 }
@@ -145,7 +145,7 @@ func (ut *UTAPIStoreSuite) Test_StoreWithReader_InvalidResponseBody() {
 	// context
 	ctx := context.TODO()
 
-	resp, err := api.StoreWithReader(ctx, testServer.URL, attIo)
+	resp, err := api.StoreWithReader(ctx, testServer.URL, "", attIo)
 	if err != nil {
 		ut.FailNow(err.Error())
 	}
@@ -177,7 +177,7 @@ func (ut *UTAPIStoreSuite) Test_StoreWithReader_BadStatusCode() {
 	// context
 	ctx := context.TODO()
 
-	resp, err := api.StoreWithReader(ctx, testServer.URL, attIo)
+	resp, err := api.StoreWithReader(ctx, testServer.URL, "", attIo)
 	ut.ErrorContains(err, "Internal Server Error")
 	ut.Equal(resp, api.StoreResponse{})
 }
@@ -203,7 +203,7 @@ func (ut *UTAPIStoreSuite) Test_StoreWithReader_BadJSONBody() {
 	// context
 	ctx := context.TODO()
 
-	resp, err := api.StoreWithReader(ctx, testServer.URL, attIo)
+	resp, err := api.StoreWithReader(ctx, testServer.URL, "", attIo)
 	ut.ErrorContains(err, "unexpected end of JSON input")
 	ut.Equal(resp, api.StoreResponse{})
 }

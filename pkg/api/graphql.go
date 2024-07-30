@@ -39,7 +39,7 @@ type graphQLRequestBody[TVars any] struct {
 	Variables TVars  `json:"variables,omitempty"`
 }
 
-func GraphQlQuery[TRes any, TVars any](ctx context.Context, baseUrl, query string, vars TVars) (TRes, error) {
+func GraphQlQuery[TRes any, TVars any](ctx context.Context, baseUrl, token string, query string, vars TVars) (TRes, error) {
 	var response TRes
 	queryUrl, err := url.JoinPath(baseUrl, "query")
 	if err != nil {
@@ -59,6 +59,10 @@ func GraphQlQuery[TRes any, TVars any](ctx context.Context, baseUrl, query strin
 	req, err := http.NewRequestWithContext(ctx, "POST", queryUrl, bytes.NewReader(reqBody))
 	if err != nil {
 		return response, err
+	}
+
+	if token != "" {
+		req.Header.Set("Authorization", "Bearer "+token)
 	}
 
 	req.Header.Set("Content-Type", "application/json")

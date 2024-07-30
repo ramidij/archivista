@@ -26,9 +26,9 @@ import (
 	"github.com/in-toto/go-witness/dsse"
 )
 
-func Download(ctx context.Context, baseUrl string, gitoid string) (dsse.Envelope, error) {
+func Download(ctx context.Context, baseUrl string, token string, gitoid string) (dsse.Envelope, error) {
 	buf := &bytes.Buffer{}
-	if err := DownloadWithWriter(ctx, baseUrl, gitoid, buf); err != nil {
+	if err := DownloadWithWriter(ctx, baseUrl, token, gitoid, buf); err != nil {
 		return dsse.Envelope{}, err
 	}
 
@@ -41,7 +41,7 @@ func Download(ctx context.Context, baseUrl string, gitoid string) (dsse.Envelope
 	return env, nil
 }
 
-func DownloadWithWriter(ctx context.Context, baseUrl, gitoid string, dst io.Writer) error {
+func DownloadWithWriter(ctx context.Context, baseUrl, token string, gitoid string, dst io.Writer) error {
 	downloadUrl, err := url.JoinPath(baseUrl, "download", gitoid)
 	if err != nil {
 		return err
@@ -50,6 +50,10 @@ func DownloadWithWriter(ctx context.Context, baseUrl, gitoid string, dst io.Writ
 	req, err := http.NewRequestWithContext(ctx, "GET", downloadUrl, nil)
 	if err != nil {
 		return err
+	}
+
+	if token != "" {
+		req.Header.Set("Authorization", "Bearer "+token)
 	}
 
 	req.Header.Set("Content-Type", "application/json")

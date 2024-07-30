@@ -56,7 +56,7 @@ func (ut *UTAPIGraphQLSuite) Test_Store() {
 	type testSubjectResult struct {
 		Data string `json:"data"`
 	}
-	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, `query`, testSubjectVar{Gitoid: "test_Gitoid"})
+	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, "", `query`, testSubjectVar{Gitoid: "test_Gitoid"})
 	ut.NoError(err)
 	ut.Equal(testSubjectResult{Data: "test"}, result)
 }
@@ -72,7 +72,7 @@ func (ut *UTAPIGraphQLSuite) Test_Store_NoServer() {
 	type testSubjectResult struct {
 		Data string `json:"data"`
 	}
-	result, err := api.GraphQlQuery[testSubjectResult](ctx, "http://invalid-archivista", `query`, testSubjectVar{Gitoid: "test_Gitoid"})
+	result, err := api.GraphQlQuery[testSubjectResult](ctx, "http://invalid-archivista", "", `query`, testSubjectVar{Gitoid: "test_Gitoid"})
 	ut.Error(err)
 	ut.Equal(testSubjectResult{Data: ""}, result)
 }
@@ -96,7 +96,7 @@ func (ut *UTAPIGraphQLSuite) Test_Store_BadStatusCode_NoMsg() {
 	type testSubjectResult struct {
 		Data string `json:"data"`
 	}
-	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, `query`, testSubjectVar{Gitoid: "test_Gitoid"})
+	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, "", `query`, testSubjectVar{Gitoid: "test_Gitoid"})
 	ut.Error(err)
 	ut.Equal(testSubjectResult{Data: ""}, result)
 }
@@ -124,7 +124,7 @@ func (ut *UTAPIGraphQLSuite) Test_Store_InvalidData() {
 	type testSubjectResult struct {
 		Data string `json:"data"`
 	}
-	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, `query`, testSubjectVar{Gitoid: "test_Gitoid"})
+	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, "", `query`, testSubjectVar{Gitoid: "test_Gitoid"})
 	ut.Error(err)
 	ut.Equal(testSubjectResult{Data: ""}, result)
 }
@@ -154,7 +154,7 @@ func (ut *UTAPIGraphQLSuite) Test_Store_QLReponseWithErrors() {
 		Errors string `json:"errors"`
 	}
 
-	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, `query`, testSubjectVar{Gitoid: "test_Gitoid"})
+	result, err := api.GraphQlQuery[testSubjectResult](ctx, testServer.URL, "", `query`, testSubjectVar{Gitoid: "test_Gitoid"})
 	ut.Error(err)
 	ut.EqualError(err, "graph ql query failed: [{test_error}]")
 	ut.Equal(testSubjectResult{Data: ""}, result)

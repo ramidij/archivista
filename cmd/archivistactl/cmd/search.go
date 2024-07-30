@@ -48,7 +48,7 @@ Digests are expected to be in the form algorithm:digest, for instance: sha256:45
 				return err
 			}
 
-			results, err := api.GraphQlQuery[searchResults](cmd.Context(), archivistaUrl, searchQuery, searchVars{Algorithm: algo, Digest: digest})
+			results, err := api.GraphQlQuery[searchResults](cmd.Context(), archivistaUrl, "", searchQuery, searchVars{Algorithm: algo, Digest: digest})
 			if err != nil {
 				return err
 			}

@@ -34,26 +34,26 @@ type UploadResponse struct {
 type StoreResponse = UploadResponse
 
 // Deprecated: Use Upload instead. It will be removed in version >= v0.6.0
-func Store(ctx context.Context, baseUrl string, envelope dsse.Envelope) (StoreResponse, error) {
-	return Upload(ctx, baseUrl, envelope)
+func Store(ctx context.Context, baseUrl string, token string, envelope dsse.Envelope) (StoreResponse, error) {
+	return Upload(ctx, baseUrl, token, envelope)
 }
 
-func Upload(ctx context.Context, baseUrl string, envelope dsse.Envelope) (StoreResponse, error) {
+func Upload(ctx context.Context, baseUrl string, token string, envelope dsse.Envelope) (StoreResponse, error) {
 	buf := &bytes.Buffer{}
 	enc := json.NewEncoder(buf)
 	if err := enc.Encode(envelope); err != nil {
 		return StoreResponse{}, err
 	}
 
-	return UploadWithReader(ctx, baseUrl, buf)
+	return UploadWithReader(ctx, baseUrl, token, buf)
 }
 
 // Deprecated: Use UploadWithReader instead. It will be removed in version >= v0.6.0
-func StoreWithReader(ctx context.Context, baseUrl string, r io.Reader) (StoreResponse, error) {
-	return UploadWithReader(ctx, baseUrl, r)
+func StoreWithReader(ctx context.Context, baseUrl string, token string, r io.Reader) (StoreResponse, error) {
+	return UploadWithReader(ctx, baseUrl, token, r)
 }
 
-func UploadWithReader(ctx context.Context, baseUrl string, r io.Reader) (StoreResponse, error) {
+func UploadWithReader(ctx context.Context, baseUrl string, token string, r io.Reader) (StoreResponse, error) {
 	uploadPath, err := url.JoinPath(baseUrl, "upload")
 	if err != nil {
 		return UploadResponse{}, err
@@ -62,6 +62,10 @@ func UploadWithReader(ctx context.Context, baseUrl string, r io.Reader) (StoreRe
 	req, err := http.NewRequestWithContext(ctx, "POST", uploadPath, r)
 	if err != nil {
 		return UploadResponse{}, err
+	}
+
+	if token != "" {
+		req.Header.Set("Authorization", "Bearer "+token)
 	}
 
 	req.Header.Set("Content-Type", "application/json")

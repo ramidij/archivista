@@ -65,7 +65,7 @@ func (ut *UTAPIDownloadSuite) Test_Download() {
 	ctx := context.TODO()
 
 	// test api.Download happy flow
-	resp, err := api.Download(ctx, testServer.URL, "gitoid_test")
+	resp, err := api.Download(ctx, testServer.URL, "", "gitoid_test")
 	if err != nil {
 		ut.FailNow(err.Error())
 	}
@@ -89,7 +89,7 @@ func (ut *UTAPIDownloadSuite) Test_Download_DecodeFailure() {
 	ctx := context.TODO()
 
 	// test api.Download happy flow
-	resp, err := api.Download(ctx, testServer.URL, "gitoid_test")
+	resp, err := api.Download(ctx, testServer.URL, "", "gitoid_test")
 	ut.Error(err)
 	ut.Equal(dsse.Envelope{}, resp)
 }
@@ -120,7 +120,7 @@ func (ut *UTAPIDownloadSuite) Test_DownloadWithReader() {
 	if err != nil {
 		ut.FailNow(err.Error())
 	}
-	err = api.DownloadWithWriter(ctx, testServer.URL, "gitoid", dst)
+	err = api.DownloadWithWriter(ctx, testServer.URL, "", "gitoid", dst)
 	if err != nil {
 		ut.FailNow(err.Error())
 	}
@@ -141,7 +141,7 @@ func (ut *UTAPIDownloadSuite) Test_DownloadWithWriter_NoServer() {
 	// dst as stdout
 	var dst io.Writer = os.Stdout
 
-	err := api.DownloadWithWriter(ctx, "http://invalid-archivista", "gitoid_test", dst)
+	err := api.DownloadWithWriter(ctx, "http://invalid-archivista", "", "gitoid_test", dst)
 	ut.Error(err)
 }
 
@@ -167,6 +167,6 @@ func (ut *UTAPIDownloadSuite) Test_DownloadWithWriter_BadStatusCode() {
 	// context
 	ctx := context.TODO()
 
-	err := api.DownloadWithWriter(ctx, testServer.URL, "gitoid_test", dst)
+	err := api.DownloadWithWriter(ctx, testServer.URL, "", "gitoid_test", dst)
 	ut.ErrorContains(err, "Internal Server Error")
 }
