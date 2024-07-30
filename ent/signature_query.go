@@ -12,10 +12,10 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/dsse"
-	"github.com/in-toto/archivista/ent/predicate"
-	"github.com/in-toto/archivista/ent/signature"
-	"github.com/in-toto/archivista/ent/timestamp"
+	"github.com/ramidij/archivista/ent/dsse"
+	"github.com/ramidij/archivista/ent/predicate"
+	"github.com/ramidij/archivista/ent/signature"
+	"github.com/ramidij/archivista/ent/timestamp"
 )
 
 // SignatureQuery is the builder for querying Signature entities.

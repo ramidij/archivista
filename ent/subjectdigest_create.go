@@ -10,8 +10,8 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/subject"
-	"github.com/in-toto/archivista/ent/subjectdigest"
+	"github.com/ramidij/archivista/ent/subject"
+	"github.com/ramidij/archivista/ent/subjectdigest"
 )
 
 // SubjectDigestCreate is the builder for creating a SubjectDigest entity.

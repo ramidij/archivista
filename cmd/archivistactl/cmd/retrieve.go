@@ -20,7 +20,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/in-toto/archivista/pkg/api"
+	"github.com/ramidij/archivista/tree/main/pkg/api"
+
 	"github.com/spf13/cobra"
 )
 

@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/in-toto/archivista/ent/attestationpolicy"
-	"github.com/in-toto/archivista/ent/predicate"
+	"github.com/ramidij/archivista/ent/attestationpolicy"
+	"github.com/ramidij/archivista/ent/predicate"
 )
 
 // AttestationPolicyDelete is the builder for deleting a AttestationPolicy entity.

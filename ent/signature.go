@@ -9,8 +9,8 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/dsse"
-	"github.com/in-toto/archivista/ent/signature"
+	"github.com/ramidij/archivista/ent/dsse"
+	"github.com/ramidij/archivista/ent/signature"
 )
 
 // Signature is the model entity for the Signature schema.

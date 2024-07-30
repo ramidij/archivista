@@ -1,4 +1,4 @@
-module github.com/in-toto/archivista
+module github.com/ramidij/archivista
 
 go 1.22.0
 

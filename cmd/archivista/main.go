@@ -31,7 +31,7 @@ import (
 
 	nested "github.com/antonfisher/nested-logrus-formatter"
 	"github.com/gorilla/handlers"
-	"github.com/in-toto/archivista/pkg/server"
+	"github.com/ramidij/archivista/pkg/server"
 	"github.com/sirupsen/logrus"
 )
 

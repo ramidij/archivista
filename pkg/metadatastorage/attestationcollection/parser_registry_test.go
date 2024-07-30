@@ -19,7 +19,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/in-toto/archivista/ent"
+	"github.com/ramidij/archivista/ent"
 	"github.com/stretchr/testify/assert"
 )
 

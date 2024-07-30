@@ -17,8 +17,9 @@ package attestationcollection
 import (
 	"context"
 	"encoding/json"
-	"github.com/in-toto/archivista/ent"
 	"log"
+
+	"github.com/ramidij/archivista/ent"
 )
 
 var registeredParsers map[string]AttestationParser

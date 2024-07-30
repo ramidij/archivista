@@ -81,7 +81,7 @@ definitions:
 info:
   contact:
     name: Archivista Contributors
-    url: https://github.com/in-toto/archivista/issues/new
+    url: https://github.com/ramidij/archivista/issues/new
   description: Archivista API
   license:
     url: https://opensource.org/licenses/Apache-2

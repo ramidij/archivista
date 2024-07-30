@@ -3,7 +3,7 @@
 </p>
 
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8280/badge)](https://www.bestpractices.dev/projects/8280)
-[![OpenSSF-Scorecard](https://api.securityscorecards.dev/projects/github.com/in-toto/archivista/badge)](https://api.securityscorecards.dev/projects/github.com/in-toto/archivista)
+[![OpenSSF-Scorecard](https://api.securityscorecards.dev/projects/github.com/ramidij/archivista/badge)](https://api.securityscorecards.dev/projects/github.com/ramidij/archivista)
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B41709%2Fgithub.com%2Fin-toto%2Farchivista.svg?type=shield&issueType=license)](https://app.fossa.com/projects/custom%2B41709%2Fgithub.com%2Fin-toto%2Farchivista?ref=badge_shield&issueType=license)
 
 # Archivista

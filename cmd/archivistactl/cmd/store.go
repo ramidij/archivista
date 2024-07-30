@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/in-toto/archivista/pkg/api"
+	"github.com/ramidij/archivista/pkg/api"
 	"github.com/spf13/cobra"
 )
 

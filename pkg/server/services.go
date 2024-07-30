@@ -25,12 +25,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/in-toto/archivista/pkg/artifactstore"
-	"github.com/in-toto/archivista/pkg/config"
-	"github.com/in-toto/archivista/pkg/metadatastorage/sqlstore"
-	"github.com/in-toto/archivista/pkg/objectstorage/blobstore"
-	"github.com/in-toto/archivista/pkg/objectstorage/filestore"
 	"github.com/minio/minio-go/v7/pkg/credentials"
+	"github.com/ramidij/archivista/pkg/artifactstore"
+	"github.com/ramidij/archivista/pkg/config"
+	"github.com/ramidij/archivista/pkg/metadatastorage/sqlstore"
+	"github.com/ramidij/archivista/pkg/objectstorage/blobstore"
+	"github.com/ramidij/archivista/pkg/objectstorage/filestore"
 	"github.com/sirupsen/logrus"
 )
 

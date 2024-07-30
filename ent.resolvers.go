@@ -10,7 +10,7 @@ import (
 
 	"entgo.io/contrib/entgql"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent"
+	"github.com/ramidij/archivista/ent"
 )
 
 // Node is the resolver for the node field.

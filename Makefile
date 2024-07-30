@@ -18,7 +18,7 @@ all: help
 
 run-dev:  ## Run the dev server
 	@echo "Running dev server. It will refresh automatically when you change code."
-	@docker compose -f compose-dev.yml up --remove-orphans
+	@docker compose -f compose.yml up --remove-orphans
 
 
 .PHONY: stop

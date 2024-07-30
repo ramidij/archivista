@@ -18,7 +18,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent"
+	"github.com/ramidij/archivista/ent"
 )
 
 type ParserFunc func([]byte) (Storer, error)

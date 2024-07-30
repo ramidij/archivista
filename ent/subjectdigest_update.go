@@ -11,9 +11,9 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/predicate"
-	"github.com/in-toto/archivista/ent/subject"
-	"github.com/in-toto/archivista/ent/subjectdigest"
+	"github.com/ramidij/archivista/ent/predicate"
+	"github.com/ramidij/archivista/ent/subject"
+	"github.com/ramidij/archivista/ent/subjectdigest"
 )
 
 // SubjectDigestUpdate is the builder for updating SubjectDigest entities.

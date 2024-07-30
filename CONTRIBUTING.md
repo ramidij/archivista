@@ -72,7 +72,7 @@ regularly [sync](https://docs.github.com/en/pull-requests/collaborating-with-pul
 you stay up-to-date with our repository:
 
 ```console
-    git remote add upstream https://github.com/in-toto/archivista.git
+    git remote add upstream https://github.com/ramidij/archivista.git
     git checkout main
     git fetch upstream
     git merge upstream/main

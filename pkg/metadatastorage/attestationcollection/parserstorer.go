@@ -17,11 +17,12 @@ package attestationcollection
 import (
 	"context"
 	"encoding/json"
+
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent"
-	"github.com/in-toto/archivista/pkg/metadatastorage"
 	"github.com/in-toto/go-witness/attestation"
 	"github.com/in-toto/go-witness/log"
+	"github.com/ramidij/archivista/ent"
+	"github.com/ramidij/archivista/pkg/metadatastorage"
 )
 
 const (

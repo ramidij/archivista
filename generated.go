@@ -17,8 +17,8 @@ import (
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent"
-	"github.com/in-toto/archivista/ent/schema/uuidgql"
+	"github.com/ramidij/archivista/ent"
+	"github.com/ramidij/archivista/ent/schema/uuidgql"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )

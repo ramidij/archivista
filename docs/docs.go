@@ -11,7 +11,7 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "contact": {
             "name": "Archivista Contributors",
-            "url": "https://github.com/in-toto/archivista/issues/new"
+            "url": "https://github.com/ramidij/archivista/issues/new"
         },
         "license": {
             "url": "https://opensource.org/licenses/Apache-2"

@@ -16,15 +16,12 @@ version: '3.9'
 
 services:
   db:
-    image: mysql:oracle
+    image: postgres:16
     restart: always
-    ports:
-      - 3306:3306
     environment:
-      MYSQL_DATABASE: testify
-      MYSQL_ROOT_PASSWORD: example
-    volumes:
-      - mysqldata:/var/lib/mysql
+      POSTGRES_USER: testify
+      POSTGRES_PASSWORD: example
+
 
   archivista:
     build:
@@ -46,6 +43,8 @@ services:
       ARCHIVISTA_ENABLE_GRAPHQL: "true"
       ARCHIVISTA_GRAPHQL_WEB_CLIENT_ENABLE: "true"
       ARCHIVISTA_CORS_ALLOW_ORIGINS: "http://localhost:1234"
+      ARCHIVISTA_SQL_STORE_BACKEND: PSQL
+      ARCHIVISTA_SQL_STORE_CONNECTION_STRING: postgresql://testify:example@db?sslmode=disable
 
     ports:
       - 8081:8081

@@ -9,8 +9,8 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/subject"
-	"github.com/in-toto/archivista/ent/subjectdigest"
+	"github.com/ramidij/archivista/ent/subject"
+	"github.com/ramidij/archivista/ent/subjectdigest"
 )
 
 // SubjectDigest is the model entity for the SubjectDigest schema.

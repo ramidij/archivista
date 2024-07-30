@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/in-toto/archivista/pkg/api"
 	"github.com/in-toto/go-witness/dsse"
+	"github.com/ramidij/archivista/pkg/api"
 	"github.com/stretchr/testify/suite"
 )
 

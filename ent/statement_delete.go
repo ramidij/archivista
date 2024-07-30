@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/in-toto/archivista/ent/predicate"
-	"github.com/in-toto/archivista/ent/statement"
+	"github.com/ramidij/archivista/ent/predicate"
+	"github.com/ramidij/archivista/ent/statement"
 )
 
 // StatementDelete is the builder for deleting a Statement entity.

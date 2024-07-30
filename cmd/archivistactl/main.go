@@ -17,7 +17,7 @@ package main
 import (
 	"os"
 
-	"github.com/in-toto/archivista/cmd/archivistactl/cmd"
+	"github.com/ramidij/archivista/cmd/archivistactl/cmd"
 )
 
 func main() {

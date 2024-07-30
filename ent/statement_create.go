@@ -10,11 +10,11 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/attestationcollection"
-	"github.com/in-toto/archivista/ent/attestationpolicy"
-	"github.com/in-toto/archivista/ent/dsse"
-	"github.com/in-toto/archivista/ent/statement"
-	"github.com/in-toto/archivista/ent/subject"
+	"github.com/ramidij/archivista/ent/attestationcollection"
+	"github.com/ramidij/archivista/ent/attestationpolicy"
+	"github.com/ramidij/archivista/ent/dsse"
+	"github.com/ramidij/archivista/ent/statement"
+	"github.com/ramidij/archivista/ent/subject"
 )
 
 // StatementCreate is the builder for creating a Statement entity.

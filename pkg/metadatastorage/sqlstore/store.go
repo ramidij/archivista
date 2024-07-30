@@ -24,13 +24,13 @@ import (
 	"time"
 
 	"github.com/digitorus/timestamp"
-	"github.com/in-toto/archivista/ent"
-	"github.com/in-toto/archivista/pkg/metadatastorage"
-	"github.com/in-toto/archivista/pkg/metadatastorage/parserregistry"
 	"github.com/in-toto/go-witness/cryptoutil"
 	"github.com/in-toto/go-witness/dsse"
 	"github.com/in-toto/go-witness/intoto"
 	"github.com/in-toto/go-witness/policy"
+	"github.com/ramidij/archivista/ent"
+	"github.com/ramidij/archivista/pkg/metadatastorage"
+	"github.com/ramidij/archivista/pkg/metadatastorage/parserregistry"
 	"github.com/sirupsen/logrus"
 )
 

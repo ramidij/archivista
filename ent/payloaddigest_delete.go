@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/in-toto/archivista/ent/payloaddigest"
-	"github.com/in-toto/archivista/ent/predicate"
+	"github.com/ramidij/archivista/ent/payloaddigest"
+	"github.com/ramidij/archivista/ent/predicate"
 )
 
 // PayloadDigestDelete is the builder for deleting a PayloadDigest entity.

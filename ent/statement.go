@@ -9,9 +9,9 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/attestationcollection"
-	"github.com/in-toto/archivista/ent/attestationpolicy"
-	"github.com/in-toto/archivista/ent/statement"
+	"github.com/ramidij/archivista/ent/attestationcollection"
+	"github.com/ramidij/archivista/ent/attestationpolicy"
+	"github.com/ramidij/archivista/ent/statement"
 )
 
 // Statement is the model entity for the Statement schema.

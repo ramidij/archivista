@@ -20,7 +20,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/in-toto/archivista/pkg/objectstorage/filestore"
+	"github.com/ramidij/archivista/pkg/objectstorage/filestore"
 	"github.com/stretchr/testify/suite"
 )
 

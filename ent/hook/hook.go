@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/in-toto/archivista/ent"
+	"github.com/ramidij/archivista/ent"
 )
 
 // The AttestationFunc type is an adapter to allow the use of ordinary

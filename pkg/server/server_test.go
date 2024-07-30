@@ -27,9 +27,9 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
-	"github.com/in-toto/archivista/pkg/api"
-	"github.com/in-toto/archivista/pkg/artifactstore"
-	"github.com/in-toto/archivista/pkg/config"
+	"github.com/ramidij/archivista/pkg/api"
+	"github.com/ramidij/archivista/pkg/artifactstore"
+	"github.com/ramidij/archivista/pkg/config"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/suite"
 )

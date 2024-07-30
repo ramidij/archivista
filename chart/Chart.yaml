@@ -25,8 +25,8 @@ keywords:
 home: https://github.com/in-toto/
 
 sources:
-  - https://github.com/in-toto/archivista/chart
-  - https://github.com/in-toto/archivista
+  - https://github.com/ramidij/archivista/chart
+  - https://github.com/ramidij/archivista
 
 maintainers:
   - name: in-toto

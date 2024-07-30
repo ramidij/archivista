@@ -32,12 +32,12 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/edwarnicke/gitoid"
 	"github.com/gorilla/mux"
-	"github.com/in-toto/archivista"
-	_ "github.com/in-toto/archivista/docs"
-	"github.com/in-toto/archivista/ent"
-	"github.com/in-toto/archivista/pkg/api"
-	"github.com/in-toto/archivista/pkg/artifactstore"
-	"github.com/in-toto/archivista/pkg/config"
+	"github.com/ramidij/archivista"
+	_ "github.com/ramidij/archivista/docs"
+	"github.com/ramidij/archivista/ent"
+	"github.com/ramidij/archivista/pkg/api"
+	"github.com/ramidij/archivista/pkg/artifactstore"
+	"github.com/ramidij/archivista/pkg/config"
 	"github.com/sirupsen/logrus"
 	httpSwagger "github.com/swaggo/http-swagger/v2"
 )
@@ -130,7 +130,7 @@ func New(cfg *config.Config, opts ...Option) (Server, error) {
 // @description Archivista API
 // @version v1
 // @contact.name Archivista Contributors
-// @contact.url https://github.com/in-toto/archivista/issues/new
+// @contact.url https://github.com/ramidij/archivista/issues/new
 // @license Apache 2
 // @license.url https://opensource.org/licenses/Apache-2
 // InitRoutes initializes the HTTP API routes for the server

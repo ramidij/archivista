@@ -10,8 +10,8 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/attestation"
-	"github.com/in-toto/archivista/ent/attestationcollection"
+	"github.com/ramidij/archivista/ent/attestation"
+	"github.com/ramidij/archivista/ent/attestationcollection"
 )
 
 // AttestationCreate is the builder for creating a Attestation entity.

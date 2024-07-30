@@ -2,7 +2,7 @@
 
 ## Security Bulletins
 
-See current security bullentins on GitHub: https://github.com/in-toto/archivista/security/advisories
+See current security bullentins on GitHub: https://github.com/ramidij/archivista/security/advisories
 
 For information regarding the security of this project please join:
 
@@ -14,7 +14,7 @@ Please use the below process to report a vulnerability to the project:
 
 Web Form:
 
-1. Please visit https://github.com/in-toto/archivista/security/advisories/new
+1. Please visit https://github.com/ramidij/archivista/security/advisories/new
    * You will receive a confirmation email upon submission
 1. You may be contacted by a maintainer to further discuss the reported item
    within 3 days. Please bear with us as we seek to understand the breadth

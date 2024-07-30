@@ -9,8 +9,8 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/attestationpolicy"
-	"github.com/in-toto/archivista/ent/statement"
+	"github.com/ramidij/archivista/ent/attestationpolicy"
+	"github.com/ramidij/archivista/ent/statement"
 )
 
 // AttestationPolicy is the model entity for the AttestationPolicy schema.

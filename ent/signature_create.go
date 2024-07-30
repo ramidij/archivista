@@ -10,9 +10,9 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/in-toto/archivista/ent/dsse"
-	"github.com/in-toto/archivista/ent/signature"
-	"github.com/in-toto/archivista/ent/timestamp"
+	"github.com/ramidij/archivista/ent/dsse"
+	"github.com/ramidij/archivista/ent/signature"
+	"github.com/ramidij/archivista/ent/timestamp"
 )
 
 // SignatureCreate is the builder for creating a Signature entity.
